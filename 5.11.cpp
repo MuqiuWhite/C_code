@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-
+#define N 100
 int main()
 {
 //	int *a[3],(*p)[3];
@@ -124,6 +124,17 @@ int main()
 //	printf("d,%d,%d\n",(*p[0])[1],p[2][0][1],*(*p[1]+1));
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 return 0;	
