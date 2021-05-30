@@ -14,7 +14,7 @@ void menu()
 int main()
 {
 	//创建通讯录 
-	struct contact con;
+	struct contact con;//包含data size cam
 	//初始化通讯录 
 	init(&con);
 	int a;
@@ -44,6 +44,7 @@ int main()
 				sor(&con);
 				break;
 			case Exit:
+				destory(&con);
 				printf("即将退出\n"); 
 				break;
 			default:

@@ -12,13 +12,50 @@ static int find(struct contact *ps,char name[max_name])
 }
 void init (struct contact *ps)
 {
-	memset(ps->data,0,sizeof(ps->data));
+	ps->data=(struct people*)malloc(default_size*sizeof(struct people));
+	if(ps->data==NULL)
+	return;
 	ps->size=0;
+	ps->cam=default_size;
+}
+
+void check(struct contact *ps)
+{
+	if (ps->size==ps->cam)
+	{//增容 
+	
+	struct people* ptr=realloc(ps->data,(ps->cam+2)*sizeof(struct people));
+	if(ptr!=NULL)
+	{
+		ps->data=ptr;
+		ps->cam+=2;
+		printf("成功\n"); 
+	}
+	else
+		printf("失败\n");
+	}
 }
 
 void add(struct contact *ps)
 {
-	if(ps->size==max)
+	//检测数据 
+	//1.没满，增加空间 2.满了，啥事不干 
+	check(ps);
+	//增加数据
+		printf("名字:>\n");
+		scanf("%s",ps->data[ps->size].name);
+		printf("年龄:>\n");
+		scanf("%d",&(ps->data[ps->size].age));
+		printf("性别:>\n");
+		scanf("%s",ps->data[ps->size].sex);
+		printf("地址:>\n");
+		scanf("%s",ps->data[ps->size].addr);
+		printf("电话:>\n");
+		scanf("%s",ps->data[ps->size].tele);	
+		ps->size++;
+		printf("好耶！成功添加！"); 
+		
+	/*if(ps->size==max)
 		printf("已满，无法添加\n");
 	else
 	{
@@ -34,7 +71,7 @@ void add(struct contact *ps)
 		scanf("%s",ps->data[ps->size].tele);	
 		ps->size++;
 		printf("好耶！成功添加！"); 
-	}	
+	}*/	
 		  
 }
 
@@ -126,8 +163,14 @@ void mod(struct contact*ps)
 
 void sor(struct contact* ps)
 {
-	ps->data[1].age
+	ps->data[1].age;
 	
+}
+
+void destory(struct contact* ps)
+{
+	free(ps->data);
+	ps->data=NULL;
 }
  
 
