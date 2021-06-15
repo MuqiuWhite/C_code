@@ -14,7 +14,7 @@ void menu()
 int main()
 {
 	//创建通讯录 
-	struct contact con;//包含data size cam
+	struct contact con;//包含data size capa
 	//初始化通讯录 
 	init(&con);
 	int a;

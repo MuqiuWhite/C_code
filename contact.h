@@ -27,11 +27,11 @@ struct people
 	char addr[max_addr];
 	char tele[max_tele];
 };
-typedef struct contact 
+typedef struct contact //通讯录 
 {
-	struct people *data;//存放一个人信息 
+	struct people *data;//结构体数组存放好多人信息 
 	int size;//记录当前已有的元素个数 
-	int cam;//当前最大容量 size==cam时，容量已满 
+	int capa;//当前最大容量 size==cam时，容量已满 
 }sc;
 
 void init (struct contact *ps);//初始化 
