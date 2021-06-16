@@ -6,8 +6,8 @@ int main(int argc, char *argv[])
 	//创建通讯录 
 	num_con con;
 	
-	initialize(&con); //初始化 
-	int input=0； 
+	Initialize_con(&con); //初始化 
+	int input=0; 
 	do
 	{
 		menu();
@@ -28,26 +28,36 @@ int main(int argc, char *argv[])
 				break;
 				
 			case Find:
-				findkind(&con);
-				findname(&con);
+				int i=0;
+				i=find_kind(); 
+				if(i==1)
+					findkind(&con);
+				else if(i==2) 				
+					findname(&con);
 				break;
 				
 			case Modify:
-				
+				modify(&con);
 				break;
 				
 			case Sort:
-				
+				sort(&con);
 				break;
 				
 			case Show:
 				show(&con);
 				break;	
+			
+			case Destory:
+				destory(&con);
+				break;
 				
 			default:
 				printf("输入错误鸭，请重新输入哦！\n");
-		}		
-	}while(n) 
+				break; 
+		}
+		
+	}while(input); 
 	
 	return 0;
 }

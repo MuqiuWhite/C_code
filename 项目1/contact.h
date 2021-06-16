@@ -1,6 +1,7 @@
 // 头文件 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define na 20
 #define te 20
 #define em 30
@@ -11,10 +12,11 @@ enum Select
 	Exit,
 	Add,
 	Dele,
-	Dind,
+	Find,
 	Modify,
 	Sort,
 	Show,
+	Destory, 
 };
 
 typedef struct people
@@ -22,12 +24,6 @@ typedef struct people
 	char name[na];
 	char tele[te];
 	char category[cate];
-//	{
-//		friend_kind,
-//		colleague_kind,
-//		business_kind,
-//		common_kind,
-//	}kind;
 	char email[em];
 	
 }people;
@@ -41,10 +37,29 @@ typedef struct num_con  //通讯录
 
 
 void menu();
+
+void check(num_con *ps);//检查是否需要扩容 
+
+int find_kind();//选择查找类型 
+
+int find(num_con *ps,char name[na]);//查找名字 
+
+int FIND(num_con *ps,char category[cate]);//查找类别 
+
 void Initialize_con(num_con *ps);//初始化
 
 void add(num_con *ps);//增加 
 
-void dele(num_cpn *ps);//删除
+void dele(num_con *ps);//删除
+
+void findkind(num_con *ps);//按类别查找 
+
+void findname(num_con *ps);//按名字查找
+
+void modify(num_con *ps);//修改 
  
+void sort(num_con *ps);//排序 
+
 void show(const num_con *ps);//显示 
+
+void destory(num_con * ps);//清空 

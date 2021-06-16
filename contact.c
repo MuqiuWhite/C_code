@@ -1,5 +1,6 @@
 //º¯ÊıÊµÏÖ 
 #include "contact.h"
+
 static int find(struct contact *ps,char name[max_name])
 {
 	int i=0;
@@ -10,6 +11,8 @@ static int find(struct contact *ps,char name[max_name])
 	}
 	return -1;
 }
+
+
 void init (struct contact *ps)
 {
 	ps->data=(struct people*)malloc(default_size*sizeof(struct people));
@@ -143,7 +146,7 @@ void sea(struct contact* ps)
 		}
 	}
 }
-void mod(struct contact*ps)
+void mod(struct contact *ps)
 {
 	char name[max_name];
 	scanf("%s",name);
@@ -171,6 +174,7 @@ void mod(struct contact*ps)
 void sor(struct contact* ps)
 {
 	ps->data[1].age;
+	
 	
 }
 
