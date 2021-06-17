@@ -3,6 +3,7 @@
 
 void menu ()
 {
+	printf("———————————————\n");
 	printf("************通讯录************\n");
 	printf("***0.退出************1.增加***\n");
 	printf("***2.删除************3.查找***\n");
@@ -52,7 +53,7 @@ int find_kind()
 		if(i==1||i==2)
 		{
 			return i;
-			break;
+		//	break;
 		}
 		else
 		{
@@ -69,25 +70,29 @@ int find(num_con *ps,char name[na])
 	int i=0;
 	for(i=0;i<ps->size;i++)
 	{
+		
 		if(strcmp(name,ps->data[i].name)==0)
 			return i;
-		else
-			return -1;
+		
+	//	else
+	//		return -1;
 	}
+	return -1;
 } 
 
 
 //查找类别 
-int FIND(num_con *ps,char category[cate])
+int FIND(num_con *ps,char category[cate],int j)
 {
 	int i=0;
-	for(i=0;i<ps->size;i++)
+	for(i=j;i<ps->size;i++)
 	{
 		if(strcmp(category,ps->data[i].category)==0)
 			return i;
-		else
-			return -1;
+//		else
+//			return -1;
 	}
+	return -1;
 } 
 
 
@@ -101,12 +106,13 @@ void add(num_con *ps)
 		printf("名字:>\n");
 		scanf("%s",ps->data[ps->size].name);//data数组下标==size 
 		printf("电话:>\n");
-		scanf("%s",&(ps->data[ps->size].tele));
+		scanf("%s",ps->data[ps->size].tele);
 		
 		do 
 		{
 		printf("类别:请准确输入朋友、同事、商务、一般:>\n");
 		scanf("%s",a);
+		getchar();//接受回车 
 		if(strcmp(a,"朋友")==0||
 		   strcmp(a,"同事")==0||
 		   strcmp(a,"商务")==0||
@@ -161,7 +167,7 @@ void dele(num_con *ps)
 //按类别查找  
 void findkind(num_con *ps)
 {
-	int i=0;
+	int i=0,j=0;
 	char a[cate]; 
 	if(0==ps->size)
 	{
@@ -169,11 +175,13 @@ void findkind(num_con *ps)
 		return;
 	}
 	
-	printf("按类别查找:\n请输入:>朋友、同事、商务、一般\n"); 
+	printf("按类别查找:\n请输入:>朋友、同事、商务、一般:>\n"); 
 	scanf("%s",a);
+//	getchar();//接受回车 
 	printf("正在查找中...\n");
+	printf("————————————————————\n");
 	//查找 
-	int result=FIND(ps,a);
+	int result=FIND(ps,a,j);
 	if(result==-1)
 	{
 		printf("找不到啊呜呜呜\n"); 		
@@ -183,12 +191,12 @@ void findkind(num_con *ps)
 		printf("%-10s\t%-10s\t%-10s\t%-10s\n","名字","电话","类别","地址"); 
 		for(i=0;i<ps->size;i++)
 		{
-		
-			printf("%-10s\t%-10s\t%-10s\t%-10s\n)",
+			printf("%-10s\t%-10s\t%-10s\t%-10s\n",
 			ps->data[result].name,
 			ps->data[result].tele,
 			ps->data[result].category,
 			ps->data[result].email);
+			result=FIND(ps,a,result+1);
 		}
 	}
 }
@@ -206,8 +214,9 @@ void findname(num_con *ps)
 	char a[na]; 
 	printf("按名字查找:\n请输入:>\n"); 
 	scanf("%s",a);
+	getchar();//接受回车 
 	printf("正在查找中...\n");
-	
+	printf("————————————————————\n");
 	int result=find(ps,a);
 	if(result==-1)
 	{
@@ -216,14 +225,11 @@ void findname(num_con *ps)
 	else
 	{
 		printf("%-10s\t%-10s\t%-10s\t%-10s\n","名字","电话","类别","地址"); 
-		for(i=0;i<ps->size;i++)
-		{
-			printf("%-10s\t%-10s\t%-10s\t%-10s\n)",
+		printf("%-10s\t%-10s\t%-10s\t%-10s\n",
 			ps->data[result].name,
 			ps->data[result].tele,
 			ps->data[result].category,
 			ps->data[result].email);
-		}
 	}	
 }
 

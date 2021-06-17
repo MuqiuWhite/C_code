@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 	
 	Initialize_con(&con); //≥ı ºªØ 
 	int input=0; 
+	int i=0;
 	do
 	{
 		menu();
@@ -28,12 +29,11 @@ int main(int argc, char *argv[])
 				break;
 				
 			case Find:
-				int i=0;
 				i=find_kind(); 
 				if(i==1)
-					findkind(&con);
-				else if(i==2) 				
 					findname(&con);
+				else if(i==2) 				
+					findkind(&con);
 				break;
 				
 			case Modify:
