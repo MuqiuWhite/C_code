@@ -44,7 +44,7 @@ int find_kind();//选择查找类型
 
 int find(num_con *ps,char name[na]);//查找名字 
 
-int FIND(num_con *ps,char category[cate],int j);//查找类别 
+//int FIND(num_con *ps,char category[cate],int j);//int j);//查找类别 
 
 void Initialize_con(num_con *ps);//初始化
 
@@ -63,3 +63,5 @@ void sort(num_con *ps);//排序
 void show(const num_con *ps);//显示 
 
 void destory(num_con * ps);//清空 
+
+
