@@ -9,6 +9,7 @@ void menu ()
 	printf("***2.删除************3.查找***\n");
 	printf("***4.修改************5.排序***\n");
 	printf("***6.显示************7.清空***\n");
+	printf("**********8.保存文件**********\n");
 	printf("******************************\n");	
 }
 
@@ -20,8 +21,12 @@ void Initialize_con(num_con *ps)//初始化
 		return;
 	ps->size=0;
 	ps->capa=first_size; 
-}
+	
+	//把文件中已经存放的信息加载入通讯录
+	load(ps); 
 
+}
+ 
 
 void check(num_con *ps)//检查是否需要扩容 
 {
@@ -208,19 +213,20 @@ void dele(num_con *ps)
 //按类别查找 
 void findkind(num_con *ps)
 {
-	int i=0;
+	int i=0,t=0;
 	char a[cate]; 
 	printf("按类别查找:\n请输入:>朋友、同事、商务、一般:>\n");
 	scanf("%s",a);
-	getchar();//接受回车 
+//	getchar();//接受回车 
 	printf("正在查找中...\n");
 	printf("————————————————————\n"); 
 	for(i=0;i<ps->size;i++)
 	{
-		if(ps->data[i].tele!='\0')
-		{
+//		if(ps->data[i].tele!='\0')
+//		{
 			if(strcmp(ps->data[i].category,a)==0)
 			{
+				t=1;
 				printf("%-10s\t%-10s\t%-10s\t%-10s\n","名字","电话","类别","地址"); 
 		
 			printf("%-10s\t%-10s\t%-10s\t%-10s\n",
@@ -229,11 +235,14 @@ void findkind(num_con *ps)
 			ps->data[i].category,
 			ps->data[i].email);	
 			}
-		} 
-		else
-			printf("找不到啊呜呜呜\n"); 
-			break;
 	}
+	if(t==0)
+	{
+		printf("找不到啊呜呜呜\n"); 
+	
+	}
+
+	
 }
 
 
@@ -354,7 +363,84 @@ void destory(num_con * ps)
 	free(ps->data);
 	ps->data=NULL;	
 	ps->size=0;
+	system("cls");
 	printf("已被清空\n");
 		
 }
- 
+
+
+//保存文件 
+//void save(num_con *ps)
+//{
+//	FILE *fp=fopen("E:\\CONTACT.txt","w");
+//	int i=0;
+//	if(fp==NULL)
+//	{
+//		perror("fopen");//错误信息
+//		return; 
+//	}
+//	//写入
+//	fprintf(fp,"%d %d",&(ps->size),&(ps->capa));
+//	for(i=0;i<ps->size;i++)
+//	{
+//		fprintf(fp,"%s",ps->data[i].name);
+//		fprintf(fp,"%s",ps->data[i].tele);
+//		fprintf(fp,"%s",ps->data[i].category);
+//		fprintf(fp,"%s",ps->data[i].email);
+//	}
+//	fclose(fp);
+//  fp=NULL;
+//	system("cls");
+//	printf("保存成功啦哇咔咔\n");	
+//} 
+
+
+//加载 
+void load(num_con *ps)
+{
+	
+	people t={0};//创建成员信息的临时变量 
+	FILE*pf=fopen("CONTACT","rb");
+	if(pf==NULL)
+	{
+		printf("load::%s\n",strerror(errno));//错误信息
+		return; 
+	}
+	//读取文件
+	while(fread(&t,sizeof(people),1,pf))//如果读到 0 ，即读取完毕 
+	{
+		check(ps);//检查容量
+		ps->data[ps->size]=t;
+		ps->size++; 
+	}
+	fclose(pf); 
+	pf=NULL;
+}
+
+
+void save(num_con *ps)
+{
+	int i=0;
+	FILE* pf=fopen("CONTACT","wb");
+	if(pf==NULL)
+	{
+		printf("save::%s\n",strerror(errno));//错误信息 
+		return ;
+	}
+	
+	//写入文件
+	for(i=0;i<ps->size;i++)
+	{
+		fwrite(&(ps->data[i]),sizeof(people),1,pf);
+
+	}
+	fclose(pf);
+	pf=NULL; 
+	system("cls"); 
+	printf("保存成功\n"); 
+ } 
+
+
+
+
+

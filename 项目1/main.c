@@ -9,6 +9,9 @@ int main(int argc, char *argv[])
 	Initialize_con(&con); //初始化 
 	int input=0; 
 	int i=0;
+//读取数据	
+	read(&con);	
+
 	do
 	{
 		menu();
@@ -17,6 +20,9 @@ int main(int argc, char *argv[])
 		switch(input)
 		{
 			case Exit:
+				save(&con);//保存数据 
+				destory(&con);//销毁通讯录并释放内存 
+				system("cls"); 
 				printf("退出成功\n"); 
 				break;
 				
@@ -52,12 +58,16 @@ int main(int argc, char *argv[])
 				destory(&con);
 				break;
 				
+			case Save:
+				save(&con);
+				break; 
+				
 			default:
 				printf("输入错误鸭，请重新输入哦！\n");
 				break; 
 		}
 		
 	}while(input); 
-	
+
 	return 0;
 }

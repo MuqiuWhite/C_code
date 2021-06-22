@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
+#include <errno.h>
 #define na 20
 #define te 20
 #define em 30
@@ -17,6 +19,7 @@ enum Select
 	Sort,
 	Show,
 	Destory, 
+	Save,
 };
 
 typedef struct people
@@ -64,4 +67,6 @@ void show(const num_con *ps);//显示
 
 void destory(num_con * ps);//清空 
 
+void save(num_con *ps); //保存 
 
+void load(num_con *ps);//加载 
