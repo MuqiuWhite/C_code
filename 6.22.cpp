@@ -1,17 +1,18 @@
 #include <stdio.h>
 int main()
 {
-	int m=0,n=0,i=0,t=0;
+	int m=0,n=0,i=0;
+	float s=0,t=0;
 	while(scanf("%d",&m)!=EOF)
 	{
-		float s=0;
-		int a[1000]={0};
 		int flag=1;
 		while(m--)
 		{
 			s=0;
-			scanf("%d",&a[m]);
-			for(i=1;i<a[m];i++)
+			t=0;
+			flag=1;
+			scanf("%d",&n);
+			for(i=1;i<=n;i++)
 			{
 				t=1.0/i;
 				s=s+flag*t;
@@ -20,6 +21,7 @@ int main()
 			}
 			printf("%.2f\n",s);
 		}
+		
 	}
 
 	
