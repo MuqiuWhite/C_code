@@ -2,34 +2,57 @@
 #include <string.h>
 int main()
 {
-	int i=0,j=0;
-	char b[1000]="0";
-	while(scanf("%d",&i)!=EOF)
+	long m=0,n=0;
+	while(scanf("%d%d",&n,&m)!=EOF&&n!=-1&&m!=-1)
 	{
-		getchar();
-		while(i--)
-		{		
-			gets(b);
-			int flag=-1;
-			int size=strlen(b);
-			for(i=0;i<=size;i++)
+			while(n%m)
 			{
-				if(b[i]==' '||i==size)	//每遇到一个空格就开始处理单词 
-				{
-					for(j=i-1;j>=0;j--&&j!=flag;j--)//从空格前的字母开始，flag的作用：防止再输出之前的正序的单词，即到上一个空格结束 
-					{
-						putchar(b[j]);
-					}
-					flag=i;
-					if(i!=size)
-						putchar(' ');
-				}				
+				int r=n%m;
+				n=m;
+				m=r;
 			}
-			printf("\n");
-		}
-	}
+			if(n==1)
+			{
+				printf("YES\n");
+			}
+			else
+				printf("POOR HAHA\n");
+			     
+	} 
+
 	return 0;
 }
+
+//	int i=0,j=0;
+//	char b[1000]="0";
+//	while(scanf("%d",&i)!=EOF)
+//	{
+//		getchar();
+//		while(i--)
+//		{		
+//			gets(b);
+//			int flag=-1;
+//			int size=strlen(b);
+//			for(i=0;i<=size;i++)
+//			{
+//				if(b[i]==' '||i==size)	//每遇到一个空格就开始处理单词 
+//				{
+//					for(j=i-1;j>=0;j--&&j!=flag;j--)//从空格前的字母开始，flag的作用：防止再输出之前的正序的单词，即到上一个空格结束 
+//					{
+//						putchar(b[j]);
+//					}
+//					flag=i;
+//					if(i!=size)
+//						putchar(' ');
+//				}				
+//			}
+//			printf("\n");
+//		}
+//	}
+
+
+
+
 
 //	int m;
 //	double a,b,c;
