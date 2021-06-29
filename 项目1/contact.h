@@ -47,8 +47,6 @@ int find_kind();//选择查找类型
 
 int find(num_con *ps,char name[na]);//查找名字 
 
-//int FIND(num_con *ps,char category[cate],int j);//int j);//查找类别 
-
 void Initialize_con(num_con *ps);//初始化
 
 void add(num_con *ps);//增加 
