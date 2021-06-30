@@ -7,11 +7,12 @@ int main()
 	char c;
 	int t;
 	scanf("%d",&t);
-	getchar();
+	
 	while(t--);
 	{
-		scanf("%c%d%d",&c,&a,&b);
 		getchar();
+		scanf("%c",&c);
+		scanf("%d%d",&a,&b);
 		switch(c)
 		{
 			case '+':
