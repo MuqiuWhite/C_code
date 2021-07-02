@@ -85,24 +85,6 @@ int find(num_con *ps,char name[na])
 	return -1;
 } 
 
-
-//查找类别 
-//int FIND(num_con *ps,char category[cate],int j)
-//{
-//	int i=0;
-//	for(i=j;i<ps->size;i++)
-//	{
-//		if(strcmp(category,ps->data[i].category)==0)
-//			return i;
-////		if(strcmp('\0',ps->data[j].name)==0)
-////			;
-////		else
-////			return -1;
-//	}
-//	return -1;
-//} 
-
-
 //添加 
 void add(num_con *ps)
 {
@@ -169,46 +151,6 @@ void dele(num_con *ps)
 		printf("删除成功！\n");
 	}
 } 
-
-
-//按类别查找  
-//void findkind(num_con *ps)
-//{
-//	int i=0,j=0;//,j=0;
-//	char a[cate]; 
-//	if(0==ps->size)
-//	{
-//		printf("通讯录为空，无法查找\n");
-//		return;
-//	}
-//	
-//	printf("按类别查找:\n请输入:>朋友、同事、商务、一般:>\n"); 
-//	scanf("%s",a);
-//	getchar();//接受回车 
-//	printf("正在查找中...\n");
-//	printf("————————————————————\n");
-//	//查找 
-//	int result=FIND(ps,a,j);
-//	if(result==-1)
-//	{
-//		printf("找不到啊呜呜呜\n"); 		
-//	}
-//	else 
-//	{
-//		printf("%-10s\t%-10s\t%-10s\t%-10s\n","名字","电话","类别","地址"); 
-//		for(i=0;i<ps->size;i++)
-//		{
-//			result=FIND(ps,a,result+1);
-//			printf("%-10s\t%-10s\t%-10s\t%-10s\n",
-//			ps->data[result].name,
-//			ps->data[result].tele,
-//			ps->data[result].category,
-//			ps->data[result].email);
-//		//	result=FIND(ps,a,result+1); //,result+1);
-//		}
-//	}
-//}
-
 
 //按类别查找 
 void findkind(num_con *ps)
@@ -367,33 +309,6 @@ void destory(num_con * ps)
 	printf("已被清空\n");
 		
 }
-
-
-//保存文件 
-//void save(num_con *ps)
-//{
-//	FILE *fp=fopen("E:\\CONTACT.txt","w");
-//	int i=0;
-//	if(fp==NULL)
-//	{
-//		perror("fopen");//错误信息
-//		return; 
-//	}
-//	//写入
-//	fprintf(fp,"%d %d",&(ps->size),&(ps->capa));
-//	for(i=0;i<ps->size;i++)
-//	{
-//		fprintf(fp,"%s",ps->data[i].name);
-//		fprintf(fp,"%s",ps->data[i].tele);
-//		fprintf(fp,"%s",ps->data[i].category);
-//		fprintf(fp,"%s",ps->data[i].email);
-//	}
-//	fclose(fp);
-//  fp=NULL;
-//	system("cls");
-//	printf("保存成功啦哇咔咔\n");	
-//} 
-
 
 //加载 
 void load(num_con *ps)
