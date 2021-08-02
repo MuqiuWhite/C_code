@@ -1,0 +1,97 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//char a[100] = "0";
+//gets_s(a);
+//int size = strlen(a);
+//int i, j;
+//for (i = 0,j=size-1; i < j; i++,j--)
+//{
+//	char temp = a[i];
+//	a[i] = a[j];
+//	a[j] = temp;
+//}
+//puts(a);
+	
+/*
+int i, j;
+
+for (i = 1; i <= 7; i++)
+{
+	for (j = 14 / 2 - i; j > 0; j--)
+	{
+		printf(" ");
+	}
+	for (j = 1; j <= 2 * i - 1; j++)
+	{
+
+		printf("*");
+	}
+	for (j = 14 / 2 - i; j > 0; j--)
+	{
+		printf(" ");
+	}
+	printf("\n");
+}
+
+for (i = 6; i >= 1; i--)
+{
+	for (j = 1; j <= 14 / 2 - i; j++)
+	{
+		printf(" ");
+	}
+	for (j = 1; j <= 2 * i - 1; j++)
+	{
+		printf("*");
+	}
+	for (j = 1; j <= 14 / 2 - i; j++)
+	{
+		printf(" ");
+	}
+	printf("\n");
+}
+
+
+*/
+//while (n--)
+//{
+//	getchar();
+//	char a[12] = "0";
+//	scanf("%s", &a);
+//	printf("6");
+//	int i = 0;
+//	for (i = 6; i < 11; i++)
+//	{
+//		printf("%c", a[i]);
+//	}
+//	printf("\n");
+//}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int n, m;
+	while (scanf("%d%d", &n,&m) != EOF)
+	{
+		int i, j;
+		for (i =0 ; i < n; i++)
+		{
+
+		}
+
+	}
+
+ return 0;
+}
+/*
+int i,m =20,r=0;
+	int sum = 0;
+	for (i = 0; m>0; i++)
+	{
+		sum = sum + m;
+		int j = m+r;
+		m = (m +r)/ 2;
+		r = j % 2;
+
+	}
+	printf("%d", sum);
+		*/
