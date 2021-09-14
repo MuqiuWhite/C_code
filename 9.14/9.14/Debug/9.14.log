@@ -1,0 +1,3 @@
+﻿  源.cpp
+E:\gitee仓库\c_code\9.14\9.14\源.cpp(30,5): error C2084: 函数“int main(void)”已有主体
+E:\gitee仓库\c_code\9.14\9.14\源.cpp(16): message : 参见“main”的前一个定义
