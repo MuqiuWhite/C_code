@@ -1,0 +1,5 @@
+﻿  源.cpp
+E:\gitee仓库\c_code\9.015\9.015\源.cpp(10,13): error C2440: “初始化”: 无法从“const char *”转换为“char *”
+E:\gitee仓库\c_code\9.015\9.015\源.cpp(10,10): message : 转换丢失限定符
+E:\gitee仓库\c_code\9.015\9.015\源.cpp(15,10): error C2440: “=”: 无法从“const char *”转换为“char *”
+E:\gitee仓库\c_code\9.015\9.015\源.cpp(15,8): message : 转换丢失限定符
