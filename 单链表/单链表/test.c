@@ -8,6 +8,32 @@ void TestSlist1()
 	SListPushBack(&plist, 2);
 	SListPushBack(&plist, 3);
 	SListPushBack(&plist, 4);
+	SListPushFront(&plist, 0);
+	SlistPrint(plist);
+
+	//SListPopFront(&plist);
+	//SListPopFront(&plist);
+	//SListPopFront(&plist);
+	//SListPopFront(&plist);
+	////SListPopFront(&plist);
+	//SlistPrint(plist);
+	//
+	//SListPopBack(&plist);
+	//SlistPrint(plist);
+
+	//在2前面插入20
+	SLTNode* pos = SListFind(plist,2);
+	if (pos)
+	{
+		SListInsert(&plist,pos,20);
+	}
+	SlistPrint(plist);	
+
+	pos = SListFind(plist, 20);
+	if (pos)
+	{
+		SListErase(&plist, pos);
+	}
 	SlistPrint(plist);
 }
 
