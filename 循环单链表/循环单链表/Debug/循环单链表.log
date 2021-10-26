@@ -1,0 +1,10 @@
+﻿  test.c
+test.obj : error LNK2019: 无法解析的外部符号 _InitList，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _ListEmpty，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _CreateListLast，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _ListLength，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _ListDelete，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _LocateELem，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _GetElem，函数 _main 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 _ShowList，函数 _main 中引用了该符号
+E:\gitee仓库\c_code\循环单链表\Debug\循环单链表.exe : fatal error LNK1120: 8 个无法解析的外部命令
