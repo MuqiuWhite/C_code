@@ -1,0 +1,5 @@
+﻿  test.c
+E:\gitee仓库\c_code\单链表复习\单链表复习\test.c(9,19): warning C4047: “=”:“STDataType *”与“STDataType”的间接级别不同
+E:\gitee仓库\c_code\单链表复习\单链表复习\test.c(19,10): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“STDataType *”
+E:\gitee仓库\c_code\单链表复习\单链表复习\test.c(131,18): warning C4047: “==”:“STDataType *”与“STDataType”的间接级别不同
+  单链表复习.vcxproj -> E:\gitee仓库\c_code\单链表复习\Debug\单链表复习.exe
