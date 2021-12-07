@@ -1,0 +1,172 @@
+SELECT snmae,workunit,id
+FROM reader
+WHERE SUBSTR(id,7,4)='1991'
+
+2.
+SELECT *
+FROM book
+WHERE bookname LIKE '数据库'
+
+3.
+SELECT bookno,publidate,shopdate,bookname
+FROM book
+WHERE shopdate BETWEEN 2015 AND 2016
+ORDER BY shopdate DESC
+
+4.
+SELECT bookno,bookname,borrowdata,returndate
+FROM borrow b,reader r
+WHERE readername='余自强' AND b.readerno=r.readerno
+
+5.
+SELECT readerno,readername,bookname,bookno,returndate
+FROM boorw,reader,book,publisher
+WHERE oubloshername='清华' AND publisherno=AND bookno AND readerno
+
+6.
+SELECT 
+FROM
+WHERE returndate IS NULL
+
+7.
+SELECT
+FROM
+WHERE boodata BETWEEN 2015 AND 2016 AND returndate IS NULL
+
+8.
+SELECT classno,classname,MAX(price),AVG(pri)
+FROM bookclass c,book b
+GROUP BY classno,classname
+ORDER BY MAX(price) DESC
+
+9.
+SELECT readerno,readrname,workunit,COUNT(*)
+FROM reader, borrow
+WHERE borrowdate IS NULL
+GROUP BY readerno,radername,workunit
+ORDER BY COUNT(*) DESC
+
+10.
+SELECT AVG(price),publishname,classname
+FROM borrow,bookclass,book
+GROUP BY publishno,classname
+
+11.
+SELECT raedername,readerno,SUM(price)
+FROM reader
+WHERE returnwdata IS NULL 
+GROUP BY readerno
+HAVING SUM(price)>=200
+
+12
+SELECT readername,workunit
+FROM reader r,borrow b
+WHERE r.readerno NOT IN
+(
+	SELECT readerno
+	FROM borrow
+)
+
+
+NOT EXISTS
+
+13.
+SELECT readerno,readername,sub(id,7,8)
+FROM reader
+WHERE classno NOT IN
+(
+	SELECT classno
+	FROM borrow b,book k
+	WHERE classname='经济类'
+)
+
+NOT EXISTS
+
+14.
+SELECT bookname,borrowdate,returndate,readerno,radername
+FROM reader, b 
+WHERE readerno IN 
+
+
+SELECT bookname,borrowdate,returndate,readerno,radername
+FROM reader r,borrow b,book c
+WHERE r.readerno=b.readerno AND b.bookno=c.bookno AND r.readerno IN
+(
+	SELECT readerno
+	FROM book b1,borrow X
+	WHERE b1.name='zz' AND b1.nookno=x.bookno	
+)
+AND r.readerno IN
+(
+	SELECT readerno
+	FROM book b1,borrow X
+	WHERE b1.name='ll' AND b1.nookno=x.bookno	
+)
+AND (b1.name='zz' OR b2.name='ll')
+
+15.
+SELECT readerno,readername,bookname,returndate,borrowdate
+FROM reader,book,borrow
+WHERE r.rno=b.rno AND bookname='shujvk' 
+16.
+SELECT 
+FROM reader X
+WHERE NOT EXISTS
+(
+	SELECT *
+	FROM reader r1,borrow b1
+	WHERE readername='zz'AND NOT EXISTS
+	(
+		SELECT *
+		FROM borrow b2
+		WHERE b2.bookno=b1.bookno AND b2.readerno=r.readerno
+	)
+
+)
+
+17.
+SELECT readerno,readername,bookid,bookname,
+FROM 
+WHERE NOT EXISTS
+(
+SELECT readerno
+FROM reader,borrow
+GROUP BY readerno
+HAVING COUNT(*)>=3
+)
+
+SELECT SUM(price)
+FROM 
+GROUP BY readerno
+HAVING MAX(s)
+
+SELECT SUM(price) s
+FROM book,reader
+WHERE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
