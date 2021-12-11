@@ -1,0 +1,120 @@
+﻿  slist.c
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(12,2): error C2061: 语法错误: 标识符“SL”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(13,1): error C2059: 语法错误:“}”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(15,14): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(15,14): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(15,21): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,17): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,17): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,28): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,40): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,41): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,18): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,18): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,29): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,41): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,42): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(20,17): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(20,17): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(20,26): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(21,16): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(21,16): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(21,25): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,3): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,12): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,12): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,21): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,33): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,34): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,15): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,15): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,28): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,35): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,47): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,48): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,14): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,14): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,27): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,32): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(28,12): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(28,12): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(28,21): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(30,3): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(5,19): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(5,19): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(5,26): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(6,1): error C2054: 在“phead”之后应输入“(”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(17,3): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(19,14): error C2065: “newnode”: 未声明的标识符
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(19,20): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(20,9): error C2065: “newnode”: 未声明的标识符
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(20,11): error C2223: “->data”的左侧必须指向结构/联合
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(21,9): error C2065: “newnode”: 未声明的标识符
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(21,11): error C2223: “->next”的左侧必须指向结构/联合
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(22,16): error C2065: “newnode”: 未声明的标识符
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(22,16): warning C4047: “return”:“int *”与“int”的间接级别不同
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(24,18): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(24,18): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(24,29): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(24,41): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(24,42): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(25,1): error C2054: 在“x”之后应输入“(”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(32,12): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(32,12): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(32,17): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.c(33,1): error C2054: 在“ps”之后应输入“(”
+  test.c
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(12,2): error C2061: 语法错误: 标识符“SL”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(13,1): error C2059: 语法错误:“}”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(15,14): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(15,14): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(15,21): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,17): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,17): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,28): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,40): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(17,41): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,18): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,18): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,29): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,41): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(19,42): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(20,17): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(20,17): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(20,26): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(21,16): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(21,16): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(21,25): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,3): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,12): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,12): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,21): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,33): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(22,34): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,15): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,15): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,28): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,35): error C2370: “SLTDataType”: 重定义；不同的存储类
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(7): message : 参见“SLTDataType”的声明
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,47): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(24,48): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,14): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,14): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,27): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(26,32): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(28,12): error C2143: 语法错误: 缺少“)”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(28,12): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(28,21): error C2059: 语法错误:“)”
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\slist.h(30,3): error C2143: 语法错误: 缺少“{”(在“*”的前面)
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\test.c(6,12): error C2297: “*”: 非法，右操作数包含“int *”类型
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\test.c(7,11): warning C4013: “PushFront”未定义；假设外部返回 int
+E:\gitee仓库\c_code\1124复习单链表\1124复习单链表\test.c(8,7): warning C4013: “Print”未定义；假设外部返回 int
+  正在生成代码...
