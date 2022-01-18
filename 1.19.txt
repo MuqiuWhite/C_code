@@ -1,0 +1,266 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include "sort.h"
+void print(int* a, int n)
+{
+	assert(a);
+	for (int i = 0; i < n; i++)
+	{
+		printf("%d  ", a[i]);
+	}
+	printf("\n");
+}
+// 插入排序
+void InsertSort(int* a, int n)
+{
+	assert(a);
+
+	for (int i = 0; i < n-1; i++)
+	{
+		// 将x插入[0, end]有序区间
+		int end=i;
+		int x=a[end+1];
+		while (end >= 0)//将数组的元素一个个比较大小排序
+		{
+			if (a[end] > x)
+			{
+				a[end + 1] = a[end];
+				end--;
+			}
+			else
+				break;
+
+		}
+		a[end + 1] = x;//两种情况（end>=0、end=-1）都是在end的后面插入。
+	}
+	
+}
+
+// 希尔排序
+//void ShellSort(int* a, int n)
+//{
+//	int gap = 3;
+//	int end = 0;
+//	int x = a[end + gap];
+//	for (int j = 0; j < gap; j++)//分成了gap组
+//	{
+//		for (int i = j; i < n - gap; i+=gap)
+//		{
+//			while (end >= 0)
+//			{
+//				if (a[end] > x)
+//				{
+//					a[end + gap] = a[end];
+//					end -= gap;
+//				}
+//				else
+//					break;
+//			}
+//			a[end + gap] = x;//在end后面插入比a[end]小的数字
+//		}
+//	}
+//}
+
+
+void ShellSort(int* a, int n)
+{
+	
+	// 多次预排序(gap > 1) +直接插入 (gap == 1)
+	int gap = n;
+	while (gap > 1)
+	{
+		gap = gap / 2;
+		//gap=gap/3+1 //加1是为了最后一次的gap一定为1即直接插入排序
+		for (int i = 0; i < n - gap; i++)//轮着来，紫红蓝紫红蓝...
+		{
+			int end = i;
+			int x = a[end + gap];
+			while (end >= 0)
+			{
+				if (a[end] > x)
+				{
+					a[end + gap] = a[end];
+					--end;
+				}
+				else
+					break;
+			}
+			a[end + gap] = x;
+
+		}
+	}
+}
+
+void swap(int* x, int* y)
+{
+	int a = *x;
+	*x = *y;
+	*y = a;
+}
+
+// 选择排序
+void SelectSort(int* a, int n)
+{
+	assert(a);
+	int begin = 0, end = n - 1;
+	while (begin < end)
+	{
+		int mini = begin, maxi = end;
+		for (int i = begin; i <= end; i++)
+		{
+			if (a[mini] > a[i])
+			{
+				mini = i;
+			}
+			if (a[maxi] < a[i])
+			{
+				maxi = i;
+			}
+		}
+		swap(&a[begin], &a[mini]);//如果第一个就是最大的，maxi对应的就被mini与begin这一步换走了.
+
+		// begin == maxi时，最大被换走了，修正一下maxi的位置
+		if (begin == maxi)
+			maxi = mini;
+		swap(&a[end], &a[maxi]);
+		end--;
+		begin++;
+	}
+}
+
+void adjustDown(int* a, int n, int parent)
+{
+	assert(a);
+	int child = parent * 2 + 1;
+	while (child <n)
+	{
+		if (a[child] < a[child + 1] && child + 1 < n)//找出左右孩子中大的那个
+		{
+			++child;
+		}
+		if (a[child] > a[parent])
+		{
+			swap(&a[child], &a[parent]);
+			parent = child;
+			child = parent * 2 + 1;
+		}
+		else
+		{
+			break;
+		}
+	}
+}
+void HeapSort(int* a, int n)
+{
+	for (int i = (n - 1 - 1) / 2; i >= 0; i--)
+	{
+		adjustDown(a, n, i);
+	}
+	for (int end = n - 1; end > 0; end--)
+	{
+		swap(&a[end], &a[0]);
+		adjustDown(a, end,0);
+	}
+}
+
+//冒泡
+void BubbleSort(int* a, int n)
+{
+	
+	for (int j = 0; j < n; j++)
+	{
+		int flag = 0;
+		for (int i = 0; i < n - j; i++)
+		{
+			if (a[i - 1] > a[i])
+			{
+				flag = 1;
+				swap(&a[i - 1], &a[i]);
+			}
+			
+		}
+		if (flag == 0)
+		{
+			break;
+		}
+	}
+}
+
+int getIndex(int* a, int left, int right)
+{
+	//int mid = (left + right) / 2;
+	int mid = left + ((right - left) >> 1);
+	if (a[left] < a[mid])
+	{
+		if (a[mid] < a[right])
+		{
+			return mid;
+		}
+		else  if (a[left] < a[right])
+		{
+			return left;
+		}
+		else
+			return right;
+
+	}
+	else
+	{
+		if (a[mid] > a[right])
+		{
+			return mid;
+		}
+		else if (a[left] < a[right])
+		{
+			return left;
+		}
+		else
+			return right;
+	}
+}
+
+int part1(int* a, int left, int right)
+{
+	// 三数取中 -- 面对有序最坏情况，变成选中位数做key，变成最好情况
+	int min = getIndex(a, left, right);
+	swap(&a[min], &a[left]);//和最左边的的值交换
+	//左边key
+	int key = left;
+	while (left < right)
+	{
+		//右边先走，找小
+		while (left<right && a[key]<=a[right])
+		{
+			right--;
+		}
+		//左边再走，找大
+		while (left < right && a[key] >= a[left])
+		{
+			left++;
+		}
+		//都找到符合条件的了，就交换
+		swap(&a[left], &a[right]);
+	}
+	swap(&a[left], &a[key]);
+
+	return left;//返回相遇的下标
+}
+
+
+
+void quickSort(int* a, int left, int right)
+{
+	if (left >= right)
+	{
+		return;
+	}
+	int key = part(a, left, right);
+	// [left, keyi-1] keyi [keyi+1, right]
+	quickSort(a, left,key-1);
+	quickSort(a, key + 1, right);
+}
+
+
+void QuickSortNonR(int* a, int left, int right)
+{
+
+}
